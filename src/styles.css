@@ -1,0 +1,6 @@
+body {
+  background-color: #e4f9f5;
+  margin: 0;
+  /* ルート要素の高さに対して何％か？ */
+  min-height: 100vh;
+}
