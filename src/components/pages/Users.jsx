@@ -1,6 +1,10 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { useRecoilState } from "recoil";
+
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
+import { userState } from "../../store/userState";
 
 // 同じデータを10個作成する
 const users = [...Array(10).keys()].map((val) => {
@@ -20,7 +24,9 @@ const users = [...Array(10).keys()].map((val) => {
 });
 
 export const Users = () => {
-  //  &copy;でコピーライトをつける
+  // Recoilによるグローバルstate管理
+  // const [userInfo, setUserInfo] = useRecoilState(userState);
+
   return (
     <SContainer>
       <h2>ユーザー一覧</h2>
